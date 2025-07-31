@@ -6,9 +6,10 @@
 import SwiftUI
 import PhotosUI
 struct AddReceipeView: View {
+    @Environment(\.dismiss) var dismiss
     @State var viewModel = AddReceipeViewModel()
     @StateObject var imageLoaderViewModel = ImageLoaderViewModel()
-    
+    @Environment(RecipeViewModel.self) var recipeViewModel
     var body: some View {
         VStack(alignment: .leading){
             Text("What's New")
@@ -32,7 +33,7 @@ struct AddReceipeView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 6))
                         .clipped()
                 }
-                    
+                
             }
             Text("Receipe Name")
                 .font(.system(size: 15,weight: .semibold))
@@ -49,7 +50,7 @@ struct AddReceipeView: View {
                     if time % 5 == 0{
                         Text("\(time) mins")
                             .tag(time)
-                            .font(.system(size: 15))                    }
+                        .font(.system(size: 15))                    }
                     
                 }
             } label: {
@@ -64,15 +65,21 @@ struct AddReceipeView: View {
                 .scrollContentBackground(.hidden)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             Button {
-                
+                recipeViewModel.saveRecipe(
+                    name: viewModel.receipeName,
+                    instruction: viewModel.instruction,
+                    prepTime: viewModel.preparationTime,
+                    image: imageLoaderViewModel.imageToUpload
+                )
+                dismiss()
             } label: {
                 Text("Add Receipe")
             }
             .buttonStyle(PrimaryButtonStyle())
-
-
-                
-                
+            
+            
+            
+            
             Spacer()
         }
         .padding(.horizontal)
@@ -93,7 +100,7 @@ struct AddReceipeView: View {
             } label: {
                 Text("Upload From PhotoCamera")
             }
-
+            
         }
         .fullScreenCover(isPresented: $viewModel.showCamera) {
             CameraPicker { image in
@@ -105,4 +112,5 @@ struct AddReceipeView: View {
 
 #Preview {
     AddReceipeView()
+        .environment(RecipeViewModel())
 }

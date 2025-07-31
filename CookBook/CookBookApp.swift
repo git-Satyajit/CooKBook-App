@@ -20,6 +20,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct CookBookApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @State var sessionmanager = SessionManager()
+    let persistenceController = PersistenceController.shared
+
     
     var body: some Scene {
         WindowGroup {
@@ -27,9 +29,11 @@ struct CookBookApp: App {
                 case .loggedIn:
                     HomeView()
                         .environment(sessionmanager)
+                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 case .loggedout:
                     LoginView()
                         .environment(sessionmanager)
+                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }
             
         }

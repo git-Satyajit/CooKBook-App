@@ -18,8 +18,6 @@
 		DA46D8FC2E1CE864006E6A11 /* CapsuleTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46D8FB2E1CE864006E6A11 /* CapsuleTextFieldStyle.swift */; };
 		DA46D8FE2E1CF20F006E6A11 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46D8FD2E1CF20F006E6A11 /* PrimaryButtonStyle.swift */; };
 		DA46D9002E1D3625006E6A11 /* AddReceipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46D8FF2E1D3625006E6A11 /* AddReceipeViewModel.swift */; };
-		DA7381782E1D488700319C3B /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7381772E1D488700319C3B /* GridView.swift */; };
-		DA73817A2E1F8ACF00319C3B /* RepresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7381792E1F8ACF00319C3B /* RepresentableView.swift */; };
 		DA8D65742E2D1BCF004B8503 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D65732E2D1BCF004B8503 /* User.swift */; };
 		DA95069E2E14FECE001CD165 /* PasswordComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95069D2E14FECE001CD165 /* PasswordComponentView.swift */; };
 		DA9506A02E150F99001CD165 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95069F2E150F99001CD165 /* RegisterView.swift */; };
@@ -31,13 +29,17 @@
 		DA97A7362E25276700E50A95 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DA97A7352E25276700E50A95 /* FirebaseAuth */; };
 		DA97A7382E25276700E50A95 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DA97A7372E25276700E50A95 /* FirebaseFirestore */; };
 		DA97A73A2E25276700E50A95 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DA97A7392E25276700E50A95 /* FirebaseStorage */; };
+		DA9876192E3B3E1500283E34 /* CookBookModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA9876172E3B3E1500283E34 /* CookBookModel.xcdatamodeld */; };
+		DA98761B2E3B405100283E34 /* Recipe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98761A2E3B405100283E34 /* Recipe+CoreDataClass.swift */; };
+		DA98761D2E3B40DA00283E34 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98761C2E3B40DA00283E34 /* Recipe+CoreDataProperties.swift */; };
+		DA98761F2E3B415500283E34 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98761E2E3B415500283E34 /* PersistenceController.swift */; };
+		DA9876222E3B483E00283E34 /* ReceipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9876212E3B483E00283E34 /* ReceipeViewModel.swift */; };
+		DA9876242E3B6B2C00283E34 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9876232E3B6B2C00283E34 /* RecipeDetailView.swift */; };
 		DABC4C7E2E129EAF004BEF9F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC4C7D2E129EAF004BEF9F /* LoginView.swift */; };
-		DABC4C802E13B431004BEF9F /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC4C7F2E13B431004BEF9F /* StateView.swift */; };
 		DABC4C832E13F080004BEF9F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC4C822E13F080004BEF9F /* LoginViewModel.swift */; };
 		DABC4C862E1410BF004BEF9F /* AuthTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC4C852E1410BF004BEF9F /* AuthTextFieldStyle.swift */; };
 		DABDD0AF2E25747800008155 /* LoadingComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDD0AE2E25747800008155 /* LoadingComponentView.swift */; };
 		DAE3AF8D2E2E6944004DD973 /* ImageLoaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3AF8C2E2E6943004DD973 /* ImageLoaderViewModel.swift */; };
-		DAE3AF8F2E2E759B004DD973 /* RView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3AF8E2E2E759B004DD973 /* RView.swift */; };
 		DAE3AF922E30B848004DD973 /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3AF912E30B848004DD973 /* CameraPicker.swift */; };
 		DAE3AF952E310FD6004DD973 /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3AF942E310FD6004DD973 /* SpeechManager.swift */; };
 		DAE3AF972E325A26004DD973 /* SpeechControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3AF962E325A26004DD973 /* SpeechControlsView.swift */; };
@@ -56,8 +58,6 @@
 		DA46D8FB2E1CE864006E6A11 /* CapsuleTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleTextFieldStyle.swift; sourceTree = "<group>"; };
 		DA46D8FD2E1CF20F006E6A11 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		DA46D8FF2E1D3625006E6A11 /* AddReceipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceipeViewModel.swift; sourceTree = "<group>"; };
-		DA7381772E1D488700319C3B /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
-		DA7381792E1F8ACF00319C3B /* RepresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentableView.swift; sourceTree = "<group>"; };
 		DA8D65732E2D1BCF004B8503 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DA95069D2E14FECE001CD165 /* PasswordComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordComponentView.swift; sourceTree = "<group>"; };
 		DA95069F2E150F99001CD165 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -66,13 +66,17 @@
 		DA9506A62E155F73001CD165 /* SessionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionState.swift; sourceTree = "<group>"; };
 		DA9506A82E1814F9001CD165 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DA97A7322E2524E000E50A95 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DA9876182E3B3E1500283E34 /* CookBookModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CookBookModel.xcdatamodel; sourceTree = "<group>"; };
+		DA98761A2E3B405100283E34 /* Recipe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DA98761C2E3B40DA00283E34 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DA98761E2E3B415500283E34 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		DA9876212E3B483E00283E34 /* ReceipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceipeViewModel.swift; sourceTree = "<group>"; };
+		DA9876232E3B6B2C00283E34 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		DABC4C7D2E129EAF004BEF9F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		DABC4C7F2E13B431004BEF9F /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
 		DABC4C822E13F080004BEF9F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		DABC4C852E1410BF004BEF9F /* AuthTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextFieldStyle.swift; sourceTree = "<group>"; };
 		DABDD0AE2E25747800008155 /* LoadingComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingComponentView.swift; sourceTree = "<group>"; };
 		DAE3AF8C2E2E6943004DD973 /* ImageLoaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderViewModel.swift; sourceTree = "<group>"; };
-		DAE3AF8E2E2E759B004DD973 /* RView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RView.swift; sourceTree = "<group>"; };
 		DAE3AF912E30B848004DD973 /* CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
 		DAE3AF932E30F888004DD973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DAE3AF942E310FD6004DD973 /* SpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechManager.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 		20FA156F2B9B333500C835F0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DA9876202E3B45F100283E34 /* CoreData */,
 				20FA15DE2B9BC4C100C835F0 /* Receipe.swift */,
 				DA9506A62E155F73001CD165 /* SessionState.swift */,
 				DA8D65732E2D1BCF004B8503 /* User.swift */,
@@ -159,14 +164,11 @@
 			children = (
 				20FA15DA2B9BC32B00C835F0 /* HomeView.swift */,
 				DABC4C7D2E129EAF004BEF9F /* LoginView.swift */,
-				DABC4C7F2E13B431004BEF9F /* StateView.swift */,
 				DA95069F2E150F99001CD165 /* RegisterView.swift */,
 				DA46D8F72E1CD2B9006E6A11 /* ReceipeDetailView.swift */,
 				DA46D8F92E1CD936006E6A11 /* AddReceipeView.swift */,
-				DA7381772E1D488700319C3B /* GridView.swift */,
-				DA7381792E1F8ACF00319C3B /* RepresentableView.swift */,
-				DAE3AF8E2E2E759B004DD973 /* RView.swift */,
 				DAE3AF962E325A26004DD973 /* SpeechControlsView.swift */,
+				DA9876232E3B6B2C00283E34 /* RecipeDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,6 +181,17 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		DA9876202E3B45F100283E34 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				DA9876172E3B3E1500283E34 /* CookBookModel.xcdatamodeld */,
+				DA98761A2E3B405100283E34 /* Recipe+CoreDataClass.swift */,
+				DA98761C2E3B40DA00283E34 /* Recipe+CoreDataProperties.swift */,
+				DA98761E2E3B415500283E34 /* PersistenceController.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		DABC4C812E13EFF4004BEF9F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +200,7 @@
 				DA9506A82E1814F9001CD165 /* HomeViewModel.swift */,
 				DA46D8FF2E1D3625006E6A11 /* AddReceipeViewModel.swift */,
 				DAE3AF8C2E2E6943004DD973 /* ImageLoaderViewModel.swift */,
+				DA9876212E3B483E00283E34 /* ReceipeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -292,13 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA7381782E1D488700319C3B /* GridView.swift in Sources */,
 				DA46D8FE2E1CF20F006E6A11 /* PrimaryButtonStyle.swift in Sources */,
 				DA9506A02E150F99001CD165 /* RegisterView.swift in Sources */,
-				DAE3AF8F2E2E759B004DD973 /* RView.swift in Sources */,
 				DABDD0AF2E25747800008155 /* LoadingComponentView.swift in Sources */,
 				DA9506A22E151371001CD165 /* RegisterViewModel.swift in Sources */,
 				20FA15DF2B9BC4C100C835F0 /* Receipe.swift in Sources */,
+				DA9876242E3B6B2C00283E34 /* RecipeDetailView.swift in Sources */,
 				20FA15DB2B9BC32B00C835F0 /* HomeView.swift in Sources */,
 				DABC4C862E1410BF004BEF9F /* AuthTextFieldStyle.swift in Sources */,
 				DA46D9002E1D3625006E6A11 /* AddReceipeViewModel.swift in Sources */,
@@ -306,17 +319,20 @@
 				DAE3AF8D2E2E6944004DD973 /* ImageLoaderViewModel.swift in Sources */,
 				DABC4C832E13F080004BEF9F /* LoginViewModel.swift in Sources */,
 				DA8D65742E2D1BCF004B8503 /* User.swift in Sources */,
+				DA9876192E3B3E1500283E34 /* CookBookModel.xcdatamodeld in Sources */,
+				DA98761D2E3B40DA00283E34 /* Recipe+CoreDataProperties.swift in Sources */,
 				DAE3AF922E30B848004DD973 /* CameraPicker.swift in Sources */,
-				DA73817A2E1F8ACF00319C3B /* RepresentableView.swift in Sources */,
 				DA9506A92E1814F9001CD165 /* HomeViewModel.swift in Sources */,
 				DA46D8F82E1CD2B9006E6A11 /* ReceipeDetailView.swift in Sources */,
 				DA9506A72E155F74001CD165 /* SessionState.swift in Sources */,
+				DA98761F2E3B415500283E34 /* PersistenceController.swift in Sources */,
 				DA46D8FA2E1CD936006E6A11 /* AddReceipeView.swift in Sources */,
-				DABC4C802E13B431004BEF9F /* StateView.swift in Sources */,
 				DABC4C7E2E129EAF004BEF9F /* LoginView.swift in Sources */,
 				DAE3AF952E310FD6004DD973 /* SpeechManager.swift in Sources */,
+				DA9876222E3B483E00283E34 /* ReceipeViewModel.swift in Sources */,
 				20FA154B2B9A788F00C835F0 /* CookBookApp.swift in Sources */,
 				DA46D8FC2E1CE864006E6A11 /* CapsuleTextFieldStyle.swift in Sources */,
+				DA98761B2E3B405100283E34 /* Recipe+CoreDataClass.swift in Sources */,
 				DA95069E2E14FECE001CD165 /* PasswordComponentView.swift in Sources */,
 				DA9506A52E155EA6001CD165 /* SessionManager.swift in Sources */,
 			);
@@ -559,6 +575,19 @@
 			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		DA9876172E3B3E1500283E34 /* CookBookModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DA9876182E3B3E1500283E34 /* CookBookModel.xcdatamodel */,
+			);
+			currentVersion = DA9876182E3B3E1500283E34 /* CookBookModel.xcdatamodel */;
+			path = CookBookModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 20FA153F2B9A788F00C835F0 /* Project object */;
 }

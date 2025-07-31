@@ -11,15 +11,12 @@ struct RegisterView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(SessionManager.self) var sessionManager: SessionManager
     var body: some View {
-        VStack {
-            
-            Text("CookBook.")
-                .font(.system(size: 25,weight:.bold))
-            
-            ZStack {
+      ZStack {
                 Color(.systemGroupedBackground)
                     .ignoresSafeArea()
                 VStack(alignment:.leading,spacing: 20) {
+                    
+                    
                     Text("Username")
                         .font(.system(size: 15))
                     TextField("Enter Username", text: $viewModel.username)
@@ -73,15 +70,16 @@ struct RegisterView: View {
                 if viewModel.isLoading {
                     LoadingComponentView()
                 }
-               }
+            }
             .alert("Error", isPresented: $viewModel.presentAlert) {
                 
             } message: {
                 Text(viewModel.errorMessage)
             }
-
-            }
+            
         }
+    }
+
 
         
     
