@@ -1,6 +1,5 @@
 //  RecipeDetailView.swift
 //  CookBook
-//  Created by Satyajit Bhol on 31/07/25.
 
 // MARK: CoreData
 import SwiftUI
@@ -9,7 +8,7 @@ struct RecipeDetailView: View {
     let recipe: Recipe
     @State var viewModel = RecipeViewModel()
     @Environment(\.dismiss) var dismiss
-    @State var showAlert = true
+    @State var showAlert = false
     @StateObject var speechManager = SpeechManager()
     
     var body: some View {
@@ -53,6 +52,7 @@ struct RecipeDetailView: View {
         .alert("Do you want to delete Receipe", isPresented: $showAlert) {
             Button("Ok", role: .destructive) {
                 viewModel.deleteRecipe(recipe)
+                print("Recipe Deletion Button Tapped")
                 dismiss()
             }
             Button("Cancel", role: .cancel) {

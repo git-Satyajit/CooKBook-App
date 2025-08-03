@@ -1,9 +1,6 @@
-//
 //  LoadingComponentView.swift
 //  CookBook
-//
-//  Created by Satyajit Bhol on 14/07/25.
-//
+//  Created by Satyajit Bhol on 14/07/25
 
 import SwiftUI
 

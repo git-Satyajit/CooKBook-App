@@ -1,9 +1,5 @@
-//
 //  SignoutViewModel.swift
 //  CookBook
-//
-//  Created by Satyajit Bhol on 04/07/25.
-//
 
 import Foundation
 import SwiftUI
@@ -21,6 +17,21 @@ class HomeViewModel  {
         catch {
             print("Error \(error.localizedDescription)")
             return false
+        }
+    }
+    
+
+    // Search text for filtering mock recipes
+     var searchText: String = ""
+
+    // Computed variable to filter mock recipes by name
+    var filteredMockRecipes: [Receipe] {
+        if searchText.isEmpty {
+            return Receipe.mockReceipes
+        } else {
+            return Receipe.mockReceipes.filter {
+                $0.name.localizedCaseInsensitiveContains(searchText)
+            }
         }
     }
 }

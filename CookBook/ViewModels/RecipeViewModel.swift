@@ -1,6 +1,6 @@
-//  ReceipeViewModel.swift
+//  RecipeViewModel.swift
 //  CookBook
-//  Created by Satyajit Bhol on 31/07/25.
+// CoreData
 import Foundation
 import CoreData
 import UIKit
@@ -8,6 +8,17 @@ import SwiftUI
 @Observable
 class RecipeViewModel {
     var recipes: [Recipe] = []
+    var searchText: String = ""
+
+    var filteredRecipes: [Recipe] {
+        if searchText.isEmpty {
+            return recipes
+        } else {
+            return recipes.filter {
+                ($0.name ?? "").localizedCaseInsensitiveContains(searchText)
+            }
+        }
+    }
     private let context = PersistenceController.shared.container.viewContext
 
     // Save

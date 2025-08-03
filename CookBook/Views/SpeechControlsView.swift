@@ -1,9 +1,6 @@
 //
 //  SpeechControlsView.swift
 //  CookBook
-//
-//  Created by Satyajit Bhol on 24/07/25.
-//
 
 import SwiftUI
 

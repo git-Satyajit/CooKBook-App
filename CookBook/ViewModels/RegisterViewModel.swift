@@ -1,9 +1,7 @@
-//
 //  RegisterViewModel.swift
 //  CookBook
-//
-//  Created by Satyajit Bhol on 02/07/25.
-//
+
+//  Created by Satyajit Bhol on 02/07/25
 
 import Foundation
 import SwiftUI

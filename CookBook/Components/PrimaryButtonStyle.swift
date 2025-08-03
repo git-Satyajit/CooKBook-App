@@ -1,9 +1,6 @@
-//
 //  PrimaryButtonStyle.swift
 //  CookBook
-//
 //  Created by Satyajit Bhol on 08/07/25.
-//
 
 import Foundation
 import SwiftUI

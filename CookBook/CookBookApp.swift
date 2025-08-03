@@ -1,8 +1,5 @@
-//
 //  CookBookApp.swift
 //  CookBook
-//
-//
 
 import SwiftUI
 import FirebaseCore
@@ -25,16 +22,9 @@ struct CookBookApp: App {
     
     var body: some Scene {
         WindowGroup {
-            switch sessionmanager.sessionState {
-                case .loggedIn:
-                    HomeView()
-                        .environment(sessionmanager)
-                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                case .loggedout:
-                    LoginView()
-                        .environment(sessionmanager)
-                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            }
+            SplashView()
+                .environment(sessionmanager)
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
             
         }
     }

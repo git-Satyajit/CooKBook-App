@@ -13,11 +13,13 @@
 		20FA157D2B9B344500C835F0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FA157C2B9B344500C835F0 /* Colors.xcassets */; };
 		20FA15DB2B9BC32B00C835F0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FA15DA2B9BC32B00C835F0 /* HomeView.swift */; };
 		20FA15DF2B9BC4C100C835F0 /* Receipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FA15DE2B9BC4C100C835F0 /* Receipe.swift */; };
+		DA323A522E3DFF2700E00622 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA323A512E3DFF2700E00622 /* SplashView.swift */; };
 		DA46D8F82E1CD2B9006E6A11 /* ReceipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46D8F72E1CD2B9006E6A11 /* ReceipeDetailView.swift */; };
 		DA46D8FA2E1CD936006E6A11 /* AddReceipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46D8F92E1CD936006E6A11 /* AddReceipeView.swift */; };
 		DA46D8FC2E1CE864006E6A11 /* CapsuleTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46D8FB2E1CE864006E6A11 /* CapsuleTextFieldStyle.swift */; };
 		DA46D8FE2E1CF20F006E6A11 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46D8FD2E1CF20F006E6A11 /* PrimaryButtonStyle.swift */; };
 		DA46D9002E1D3625006E6A11 /* AddReceipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46D8FF2E1D3625006E6A11 /* AddReceipeViewModel.swift */; };
+		DA5581F52E3F1577001B596C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5581F42E3F1577001B596C /* SearchBar.swift */; };
 		DA8D65742E2D1BCF004B8503 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D65732E2D1BCF004B8503 /* User.swift */; };
 		DA95069E2E14FECE001CD165 /* PasswordComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95069D2E14FECE001CD165 /* PasswordComponentView.swift */; };
 		DA9506A02E150F99001CD165 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95069F2E150F99001CD165 /* RegisterView.swift */; };
@@ -33,7 +35,7 @@
 		DA98761B2E3B405100283E34 /* Recipe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98761A2E3B405100283E34 /* Recipe+CoreDataClass.swift */; };
 		DA98761D2E3B40DA00283E34 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98761C2E3B40DA00283E34 /* Recipe+CoreDataProperties.swift */; };
 		DA98761F2E3B415500283E34 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98761E2E3B415500283E34 /* PersistenceController.swift */; };
-		DA9876222E3B483E00283E34 /* ReceipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9876212E3B483E00283E34 /* ReceipeViewModel.swift */; };
+		DA9876222E3B483E00283E34 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9876212E3B483E00283E34 /* RecipeViewModel.swift */; };
 		DA9876242E3B6B2C00283E34 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9876232E3B6B2C00283E34 /* RecipeDetailView.swift */; };
 		DABC4C7E2E129EAF004BEF9F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC4C7D2E129EAF004BEF9F /* LoginView.swift */; };
 		DABC4C832E13F080004BEF9F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC4C822E13F080004BEF9F /* LoginViewModel.swift */; };
@@ -53,11 +55,13 @@
 		20FA157C2B9B344500C835F0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		20FA15DA2B9BC32B00C835F0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		20FA15DE2B9BC4C100C835F0 /* Receipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipe.swift; sourceTree = "<group>"; };
+		DA323A512E3DFF2700E00622 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		DA46D8F72E1CD2B9006E6A11 /* ReceipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceipeDetailView.swift; sourceTree = "<group>"; };
 		DA46D8F92E1CD936006E6A11 /* AddReceipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceipeView.swift; sourceTree = "<group>"; };
 		DA46D8FB2E1CE864006E6A11 /* CapsuleTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleTextFieldStyle.swift; sourceTree = "<group>"; };
 		DA46D8FD2E1CF20F006E6A11 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		DA46D8FF2E1D3625006E6A11 /* AddReceipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceipeViewModel.swift; sourceTree = "<group>"; };
+		DA5581F42E3F1577001B596C /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		DA8D65732E2D1BCF004B8503 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DA95069D2E14FECE001CD165 /* PasswordComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordComponentView.swift; sourceTree = "<group>"; };
 		DA95069F2E150F99001CD165 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -70,7 +74,7 @@
 		DA98761A2E3B405100283E34 /* Recipe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DA98761C2E3B40DA00283E34 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DA98761E2E3B415500283E34 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
-		DA9876212E3B483E00283E34 /* ReceipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceipeViewModel.swift; sourceTree = "<group>"; };
+		DA9876212E3B483E00283E34 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		DA9876232E3B6B2C00283E34 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		DABC4C7D2E129EAF004BEF9F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		DABC4C822E13F080004BEF9F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 				DA46D8F92E1CD936006E6A11 /* AddReceipeView.swift */,
 				DAE3AF962E325A26004DD973 /* SpeechControlsView.swift */,
 				DA9876232E3B6B2C00283E34 /* RecipeDetailView.swift */,
+				DA323A512E3DFF2700E00622 /* SplashView.swift */,
+				DA5581F42E3F1577001B596C /* SearchBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,7 +206,7 @@
 				DA9506A82E1814F9001CD165 /* HomeViewModel.swift */,
 				DA46D8FF2E1D3625006E6A11 /* AddReceipeViewModel.swift */,
 				DAE3AF8C2E2E6943004DD973 /* ImageLoaderViewModel.swift */,
-				DA9876212E3B483E00283E34 /* ReceipeViewModel.swift */,
+				DA9876212E3B483E00283E34 /* RecipeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 				DA9506A22E151371001CD165 /* RegisterViewModel.swift in Sources */,
 				20FA15DF2B9BC4C100C835F0 /* Receipe.swift in Sources */,
 				DA9876242E3B6B2C00283E34 /* RecipeDetailView.swift in Sources */,
+				DA5581F52E3F1577001B596C /* SearchBar.swift in Sources */,
 				20FA15DB2B9BC32B00C835F0 /* HomeView.swift in Sources */,
 				DABC4C862E1410BF004BEF9F /* AuthTextFieldStyle.swift in Sources */,
 				DA46D9002E1D3625006E6A11 /* AddReceipeViewModel.swift in Sources */,
@@ -323,13 +330,14 @@
 				DA98761D2E3B40DA00283E34 /* Recipe+CoreDataProperties.swift in Sources */,
 				DAE3AF922E30B848004DD973 /* CameraPicker.swift in Sources */,
 				DA9506A92E1814F9001CD165 /* HomeViewModel.swift in Sources */,
+				DA323A522E3DFF2700E00622 /* SplashView.swift in Sources */,
 				DA46D8F82E1CD2B9006E6A11 /* ReceipeDetailView.swift in Sources */,
 				DA9506A72E155F74001CD165 /* SessionState.swift in Sources */,
 				DA98761F2E3B415500283E34 /* PersistenceController.swift in Sources */,
 				DA46D8FA2E1CD936006E6A11 /* AddReceipeView.swift in Sources */,
 				DABC4C7E2E129EAF004BEF9F /* LoginView.swift in Sources */,
 				DAE3AF952E310FD6004DD973 /* SpeechManager.swift in Sources */,
-				DA9876222E3B483E00283E34 /* ReceipeViewModel.swift in Sources */,
+				DA9876222E3B483E00283E34 /* RecipeViewModel.swift in Sources */,
 				20FA154B2B9A788F00C835F0 /* CookBookApp.swift in Sources */,
 				DA46D8FC2E1CE864006E6A11 /* CapsuleTextFieldStyle.swift in Sources */,
 				DA98761B2E3B405100283E34 /* Recipe+CoreDataClass.swift in Sources */,

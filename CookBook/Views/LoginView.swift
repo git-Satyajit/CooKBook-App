@@ -1,7 +1,7 @@
 //
 //  LoginView.swift
 //  CookBook
-//  Created by Satyajit Bhol on 30/06/25.
+
 import SwiftUI
 
 struct LoginView: View {

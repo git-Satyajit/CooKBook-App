@@ -1,9 +1,6 @@
-//
 //  PasswordComponentView.swift
 //  CookBook
-//
 //  Created by Satyajit Bhol on 02/07/25.
-//
 
 import SwiftUI
 

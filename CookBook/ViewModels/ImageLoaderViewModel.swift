@@ -1,7 +1,5 @@
 //
 //  ImageLoaderViewModel.swift
-//
-//
 
 import Foundation
 import PhotosUI

@@ -1,7 +1,3 @@
-//
-//  HomeView.swift
-//  CookBook
-//
 import SwiftUI
 
 struct HomeView: View {
@@ -27,8 +23,10 @@ struct HomeView: View {
         GridItem(.flexible())
     ]
 
-    // MARK: - Subviews
-    
+    var isSearching: Bool {
+        !viewModel.searchText.isEmpty
+    }
+
     @ViewBuilder
     private func receipeRow(receipe: Receipe) -> some View {
         VStack(alignment: .leading) {
@@ -38,7 +36,7 @@ struct HomeView: View {
                 .frame(width: itemWidth, height: itemHeight)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 .clipped()
-            
+
             Text(receipe.name)
                 .lineLimit(1)
                 .font(.system(size: 15, weight: .semibold))
@@ -57,19 +55,21 @@ struct HomeView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 8))
                     .clipped()
             }
-            
+
             Text(recipe.name ?? "")
                 .lineLimit(1)
                 .font(.system(size: 15, weight: .semibold))
                 .foregroundStyle(Color.black)
         }
     }
-    
+
     @ViewBuilder
     private var recipeGrid: some View {
         LazyVGrid(columns: columns, spacing: spacing) {
-            // Static 7 mock recipes
-            ForEach(Receipe.mockReceipes, id: \.name) { mock in
+            let mocks = isSearching ? viewModel.filteredMockRecipes : Receipe.mockReceipes
+            let saved = isSearching ? recipeViewModel.filteredRecipes : recipeViewModel.recipes
+
+            ForEach(mocks, id: \.name) { mock in
                 NavigationLink {
                     ReceipeDetailView(receipe: mock)
                 } label: {
@@ -77,18 +77,24 @@ struct HomeView: View {
                 }
             }
 
-            // CoreData recipes
-            ForEach(recipeViewModel.recipes, id: \.objectID) { recipe in
+            ForEach(saved, id: \.objectID) { recipe in
                 NavigationLink {
                     RecipeDetailView(recipe: recipe)
                 } label: {
                     recipeRowFromCoreData(recipe: recipe)
                 }
             }
+
+            if mocks.isEmpty && saved.isEmpty {
+                Text("No results found.")
+                    .foregroundStyle(.gray)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+            }
         }
         .padding(.horizontal, padding)
     }
-    
+
     @ViewBuilder
     private var addRecipeButton: some View {
         Button {
@@ -99,31 +105,36 @@ struct HomeView: View {
         .buttonStyle(PrimaryButtonStyle())
         .padding(.horizontal)
     }
-    
-    @ToolbarContentBuilder
-    private var toolbarContent: some ToolbarContent {
-        ToolbarItem(placement: .topBarTrailing) {
-            Button {
-                viewModel.showSignoutAlert = true
-            } label: {
-                Image(systemName: "gearshape.fill")
-                    .foregroundStyle(Color.black)
-            }
-        }
-    }
 
-    // MARK: - Body
     var body: some View {
         NavigationStack {
             ZStack(alignment: .bottom) {
-                VStack {
+               
+                VStack(spacing: 0) {
                     ScrollView {
-                        recipeGrid
-                            .padding(.bottom, 60) // add padding so grid doesn't hide behind button
+                        HStack {
+                            Spacer()
+                            Text("Receipes")
+                                .font(.system(size: 24, weight: .bold))
+                            Spacer()
+                            Button {
+                                viewModel.showSignoutAlert = true
+                            } label: {
+                                Image(systemName: "gearshape.fill")
+                                    .foregroundStyle(Color.black)
+                                    .font(.title3)
+                            }
+                        }
+                        .padding(.horizontal)
+                        .padding(.top, 10)
+
+                        SearchBar(text: $viewModel.searchText)
+                            .padding(.horizontal)
+                            .padding(.bottom)
+                            recipeGrid
+                                .padding(.bottom, 60)
                     }
-                    .toolbar {
-                        toolbarContent
-                    }
+                    .padding(10)
                     .alert("Are You sure to logout ?", isPresented: $viewModel.showSignoutAlert) {
                         Button("Sign out", role: .destructive) {
                             if viewModel.signOut() {
@@ -134,11 +145,10 @@ struct HomeView: View {
                         }
                         Button("Cancel", role: .cancel) {}
                     }
-                    .navigationTitle("Receipes")
-                    .font(.system(size: 20))
+//                    .navigationTitle("Receipes")
+//                    .font(.system(size: 20))
                 }
 
-                // Fixed button
                 addRecipeButton
                     .padding(.bottom, 10)
             }
@@ -149,6 +159,9 @@ struct HomeView: View {
             .onAppear {
                 recipeViewModel.fetchRecipes()
             }
+            .onChange(of: viewModel.searchText) {
+                recipeViewModel.searchText = viewModel.searchText
+            }
         }
     }
 }
@@ -157,4 +170,3 @@ struct HomeView: View {
     HomeView()
         .environment(SessionManager())
 }
-
